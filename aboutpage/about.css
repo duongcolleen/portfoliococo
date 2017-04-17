@@ -1,4 +1,4 @@
-html, body, ul {
+html, body, ul, div {
     padding; 0;
     margin: 0;
 }
@@ -19,6 +19,31 @@ body{
     height:130px
 }
 
+.content {
+    margin: -5px; 
+}
+
+.projecttitle {
+    text-align: center; 
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 300%;
+    margin: 0;
+    background-color: #B6DCB7;
+}
+
+.sprouts {
+    list-style: none;
+    text-align: center;
+    height: 30px;
+}
+
+.sprout {
+    background-color: white;
+    list-style: none;
+    text-align: center;
+}
+
 .nav {
     background-color: #F48787;
     color:#ffffff;
@@ -34,25 +59,66 @@ body{
 
 .nav > li > a {
     text-decoration: none;
-    color:#ffffff;  
+    color:`#ffffff;  
 }
 
 .nav > li > a:hover {
     font-weight: 900;
+    color: black;
 }
 
-.projecttitle {
-    text-align: center; 
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 300%;
+.row:visited {
+    color: white;
 }
 
-.projecttitle {
-    background-color: #B6DCB7;
+a {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:black;}  /* mouse over link */
+a:active {color:black;}  /* selected link */
+
+.row {
+    background-color: #F48787;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.row > li {
+    display: inline-block;
+    padding: 0 20px 0 20px;
+}
+
+.row > li > a {
+    text-decoration: none;
+    color:#ffffff;  
+}
+
+.row > li > a:hover {
+    font-weight: 900;
+    color: black;
 }
 
 ul {
     margin: 5px;
     padding: 5px; 
+}
+
+.contentrow1 {
+    list-style: none;
+    text-align: center;
+}
+
+.linkout {
+    text-align: center; 
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+    margin: 0;
+    background-color: #B6DCB7;
+}
+
+.socialmedia {
+    height: 60px; 
+    width: 60px;
 }

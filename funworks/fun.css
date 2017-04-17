@@ -19,6 +19,31 @@ body{
     height:130px
 }
 
+.content {
+    margin: -5px; 
+}
+
+.projecttitle {
+    text-align: center; 
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 300%;
+    margin: 0;
+    background-color: #B6DCB7;
+}
+
+.sprouts {
+    list-style: none;
+    text-align: center;
+    height: 30px;
+}
+
+.sprout {
+    background-color: white;
+    list-style: none;
+    text-align: center;
+}
+
 .nav {
     background-color: #F48787;
     color:#ffffff;
@@ -34,22 +59,44 @@ body{
 
 .nav > li > a {
     text-decoration: none;
-    color:#ffffff;  
+    color:`#ffffff;  
 }
 
 .nav > li > a:hover {
     font-weight: 900;
+    color: black;
 }
 
-.projecttitle {
-    text-align: center; 
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 300%;
+.row:visited {
+    color: white;
 }
 
-.projecttitle {
-    background-color: #B6DCB7;
+a {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:black;}  /* mouse over link */
+a:active {color:black;}  /* selected link */
+
+.row {
+    background-color: #F48787;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.row > li {
+    display: inline-block;
+    padding: 0 20px 0 20px;
+}
+
+.row > li > a {
+    text-decoration: none;
+    color:#ffffff;  
+}
+
+.row > li > a:hover {
+    font-weight: 900;
+    color: black;
 }
 
 ul {
@@ -57,8 +104,9 @@ ul {
     padding: 5px; 
 }
 
-div {
-    margin: 0;
+.contentrow1 {
+    list-style: none;
+    text-align: center;
 }
 
 .project {
@@ -67,11 +115,141 @@ div {
 }
 
 .thumbnail {
-  width: 220px;
-  height: 220px;
+  width: 320px;
+  height: px;
   background-color: #ddd;
-  margin: 57px;
+  margin: 15px;
   float: left;
   cursor: pointer;
 align-content: center;
+}
+
+
+.tilter {
+	display: block;
+	position: relative;
+	width: 260px;
+	height: 350px;
+	color: white;
+	flex: none;
+	perspective: 1000px;
+    
+}
+
+.tilter * {
+	pointer-events: none;
+}
+
+.tilter:hover,
+.tilter:focus {
+	color: white;
+	outline: none;
+    opacity: 0.5;
+    ;
+
+}
+
+/*
+.tilter__figure,
+.tilter__deco,
+.tilter__caption {
+	will-change: transform;
+}*/
+
+.tilter__figure,
+.tilter__image {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.tilter__figure > * {
+	transform: translateZ(0px); /* Force correct stacking order */
+}
+
+.smooth .tilter__figure,
+.smooth .tilter__deco--overlay,
+.smooth .tilter__deco--lines,
+.smooth .tilter__deco--shine div,
+.smooth .tilter__caption {
+	transition: transform 0.2s ease-out;
+}
+
+.tilter__figure {
+	position: relative;
+}
+
+.tilter__figure::before {
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	box-shadow: 0 30px 20px rgba(35,32,39,0.5);
+}
+
+.tilter__deco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.tilter__deco--overlay {
+    background: rgba(54, 25, 25, .3)}
+
+
+.tilter__deco--shine div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+
+}
+
+.tilter__deco--lines {
+	fill: none;
+	stroke: white;
+	stroke-width: 2px;
+}
+
+.tilter__caption {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 4em;}
+
+.tilter__title {
+	margin: 0;
+	font-weight: bold;
+	font-size: 3em;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1;
+}
+
+.tilter__description {
+	margin: 1em 0 0 0;
+	font-size: 0.85em;
+	letter-spacing: 0.15em;
+}
+
+.tilter--5 .tilter__deco--lines path {
+	stroke-dasharray: 1270;
+	stroke-dashoffset: 1270;
+	transition: stroke-dashoffset 0.7s;
+}
+
+.tilter--5:hover .tilter__deco--lines path {
+	stroke-dashoffset: 0;
+}
+
+.tilter--5 .tilter__figure::before {
+	box-shadow: none;
+
+    
 }
